@@ -1,41 +1,25 @@
-# step1 Typescriptの基本
+# step2 Promiseについて
+
 以下は全てdockerコンテナにアタッチして行ってください。
 ```$xslt
 # APIコンテナにアタッチ
 docker exec -it bp-api /bin/bash
 ```
-## トランスコンパイル
-### 1つのファイルをトランスコンパイルしてみる
+またpromise.jsの実行は以下のコマンドです。
 ```$xslt
-tsc app.ts
+tsc && node lib/promise{n}.js
 ```
-オプションなしだと、同一Dirにjsファイルが作成される。
-### このjsを実行してみる
-```$xslt
-node app.js
-```
+## Promise
+Promiseは非同期処理の状態を持つオブジェクトです。  
+JSのコールバック地獄を回避できる。また処理の順番が問題にならない場合に複数の処理速度を効率化できる。  
+※ ここでいう非同期は並列処理ではない（JavaScriptはシングルスレッドなので）  
 
-### tsconfig.jsonでオプションを指定
-```$xslt
-# tsconfig.jsonが存在するDirで
-tsc
-```
-tsconfig.jsonでtscのオプションを設定できる。
-https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
-https://www.typescriptlang.org/docs/handbook/compiler-options.html
+  
+昨今の通信ライブラリやORMライブラリなどは非同期処理(promise)がほとんどなので、async/awaitも込みで操作できる必要がある。
 
-## tsのメリット
- - jsのコンパイル対象のバージョンを切り替えられる（完全ではないが）
- - 静的型付け言語のメリットを享受できる。特に複数人開発の場合に有効な場合がある。
+## async/await
+Promiseをより操作しやすくするためのもの
+asyncメソッド：必ずpromiseを返すメソッド
+await: promiseがresolve or rejectされるのを待つ。（asyncメソッド内でしか書けない）
 
-### コンパイルエラー
-```$xslt
-# app.ts:9の引数の型を変更してみる
-constructor(urls: string) {
-```
-### strict=trueの厳密さ
-```$xslt
-# app.ts:26, 27のコメントアウト
-urlObjects.nullables = null
-urlObjects.nullables = undefined
-```
+## Promise.allで全ての処理を待つ
