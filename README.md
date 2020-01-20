@@ -7,7 +7,7 @@ sh run.sh
 以下は全てdockerコンテナにアタッチして行ってください。
 ```$xslt
 # APIコンテナにアタッチ
-docker exec -it bp-api /bin/bash
+docker exec -it bp-vue /bin/bash
 ```
 
 ## Vue-cli
