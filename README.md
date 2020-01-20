@@ -22,4 +22,6 @@ Promiseをより操作しやすくするためのもの
 asyncメソッド：必ずpromiseを返すメソッド
 await: promiseがresolve or rejectされるのを待つ。（asyncメソッド内でしか書けない）
 
-## Promise.allで全ての処理を待つ
+## Promiseでの処理の待ち方
+ - Promise.all()
+ - Promiseの結果の取得方法
