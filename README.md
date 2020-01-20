@@ -2,10 +2,13 @@
 
 ## 事前準備
 以下の2点をチェックしてください。
- - http://localhost:24441/post
+ - http://localhost:24441/postにアクセスしてjsonが返ってくるか
+ - http://localhost:24440にアクセスしてvuejsのデフォルト画面が表示されるか
+ 
+もし、2点が正常に表示されない場合は、以下のコマンド。
 ```$xslt
-# APIコンテナにアタッチ
-docker exec -it bp-api /bin/bash
+# dockerコンテナ外で実行
+sh run.sh
 ```
 
 ## Vue-cli
