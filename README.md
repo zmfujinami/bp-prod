@@ -23,6 +23,11 @@ vue create .
 (In package.json)  
 (Use NPM)
 
+```$xslt
+npm install --save axios
+```
+axiosのインストール
+
 ## vue起動とコンパイル
 ```$xslt
 # サーバー起動(http://localhost:24440)
