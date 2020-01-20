@@ -18,3 +18,7 @@ CliコマンドでVueプロジェクト作成などを行う。
 ```$xslt
 vue create .
 ```
+(Yes/No)の質問はデフォルト  
+(Manually) typescript, routerを選択  
+(In package.json)  
+(Use NPM)
