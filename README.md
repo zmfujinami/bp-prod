@@ -22,3 +22,11 @@ vue create .
 (Manually) typescript, routerを選択  
 (In package.json)  
 (Use NPM)
+
+## vue起動とコンパイル
+```$xslt
+# サーバー起動(http://localhost:24440)
+npm run serve
+# distへコンパイル
+npm run build
+```
