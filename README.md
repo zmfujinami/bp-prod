@@ -1,8 +1,4 @@
-# step3 Vue Cli
-一旦docker環境を再起動します。
-```$xslt
-sh run.sh
-```
+# step4 VueJsの基本
 
 以下は全てdockerコンテナにアタッチして行ってください。
 ```$xslt
