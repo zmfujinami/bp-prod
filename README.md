@@ -1,6 +1,8 @@
 # step4 VueJsの基本
 
-以下は全てdockerコンテナにアタッチして行ってください。
+## 事前準備
+以下の2点をチェックしてください。
+ - http://localhost:24441/post
 ```$xslt
 # APIコンテナにアタッチ
 docker exec -it bp-api /bin/bash
