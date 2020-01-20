@@ -36,6 +36,7 @@
     private posts: Post[] = []
 
     async created() {
+      // API通信でjsonを取得
       this.posts = await this.httpClient.getPosts()
     }
 
